@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         Setting::create([
             'name' => 'Подключить Яндекс',
             'description' => 'Укажите ссылку на Яндекс, пример <a href="https://yandex.ru/maps/org/samoye_populyarnoye_kafe/1010501395/reviews/">https://yandex.ru/maps/org/samoye_populyarnoye_kafe/1010501395/reviews/</a>',
-            'code' => 'YandexMap',
+            'code' => 'yandexLink',
         ]);
     }
 }

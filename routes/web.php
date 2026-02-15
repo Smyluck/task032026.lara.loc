@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/user/{user}/settings/edit', [UserSettingController::class, 'edit'])->name('user.settings.edit');
     Route::put('/user/{user}/settings', [UserSettingController::class, 'update'])->name('user.settings.update');
-    Route::get('/yandex/reviews/', [YandexReviewsController::class, 'index'])->name('yandex.reviews.index');
+    Route::get('/yandex/reviews/{user}', [YandexReviewsController::class, 'index'])->name('yandex.reviews.index');
 });
 
 require __DIR__.'/auth.php';

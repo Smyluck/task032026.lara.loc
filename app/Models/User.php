@@ -48,6 +48,8 @@ class User extends Authenticatable
 
     public function settings()
     {
-        return $this->belongsToMany(Setting::class);
+        return $this->belongsToMany(Setting::class)
+            ->withPivot('value')
+            ->withTimestamps();
     }
 }

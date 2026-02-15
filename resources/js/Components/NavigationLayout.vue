@@ -34,8 +34,8 @@ const showingNavigationDropdown = ref(false);
         <ul>
             <li>
                 <NavLink
-                    :href="route('yandex.reviews.index')"
-                    :active="route().current('yandex.reviews.index')"
+                    :href="route('yandex.reviews.index', $page.props.auth.user.id)"
+                    :active="route().current('yandex.reviews.index', $page.props.auth.user.id)"
                     >Отзывы</NavLink
                 >
             </li>
